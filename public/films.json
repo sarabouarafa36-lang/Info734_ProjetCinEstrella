@@ -1,0 +1,14 @@
+[
+    { "id": 1, "title": "Dernier métro pour Mars", "year": 2026, "overview": "Une conductrice découvre une station absente de tous les plans." },
+    { "id": 2, "title": "La nuit des parapluies", "year": 2025, "overview": "Une ville se réveille avec des parapluies qui racontent les secrets de leurs propriétaires." },
+    { "id": 3, "title": "Le lac à l’envers", "year": 2024, "overview": "Trois amis explorent le reflet d’un lac où le temps remonte." },
+    { "id": 4, "title": "Silence, on cuisine", "year": 2026, "overview": "Un ingénieur du son rejoint une brigade de cuisine pendant un concours improbable." },
+    { "id": 5, "title": "Les étoiles de poche", "year": 2023, "overview": "Une astronome collectionne les morceaux d’un ciel disparu." },
+    { "id": 6, "title": "Retour à lundi", "year": 2025, "overview": "Deux colocataires tentent de sortir d’un lundi qui recommence après chaque café." },
+    { "id": 7, "title": "Le phare sans gardien", "year": 2024, "overview": "Un phare continue d’envoyer des messages en morse que personne n’a écrits." },
+    { "id": 8, "title": "Annecy sous la neige", "year": 2026, "overview": "Une classe d’ingénieurs bloquée par la neige doit livrer son projet avant minuit." },
+    { "id": 9, "title": "La brigade des chats", "year": 2023, "overview": "Les chats d’un quartier s’organisent pour retrouver un poisson rouge disparu." },
+    { "id": 10, "title": "Mémoire vive", "year": 2025, "overview": "Une informaticienne retrouve ses souvenirs d’enfance dans un vieux disque dur." },
+    { "id": 11, "title": "Le dernier vidéoclub", "year": 2024, "overview": "Le propriétaire d’un vidéoclub refuse de fermer et organise une ultime projection." },
+    { "id": 12, "title": "Marée haute à Paris", "year": 2026, "overview": "La Seine monte d’un mètre par jour et personne ne sait pourquoi." }
+]

@@ -1,0 +1,180 @@
+/* Exercices React : styles fournis. Vous n'avez pas de CSS à écrire. */
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #162d45;
+  background: #f5f7fa;
+  line-height: 1.5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  background: #174bbd;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+button:hover {
+  background: #103888;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #8c9eb2;
+  border-radius: 5px;
+  background: white;
+  padding: 10px;
+  color: #162d45;
+}
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 14px 0 5px;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 4vw 48px;
+}
+h1 {
+  font-size: 32px;
+  margin: 24px 0 16px;
+}
+h2 {
+  font-size: 24px;
+  margin: 20px 0 12px;
+}
+
+/* Le menu des exercices */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 10px 4vw;
+  background: #162d45;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.menu a[aria-current='page'] {
+  background: white;
+  color: #162d45;
+  font-weight: 700;
+}
+
+/* Une grille de cartes, et une carte */
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 24px 16px;
+}
+.movie h3 {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 10px 0 2px;
+}
+.year {
+  font-size: 13px;
+  margin: 0 0 8px;
+  color: #425971;
+}
+
+/* Une affiche : un bloc coloré, avec le titre en grand */
+.poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  background: #194c7d;
+  color: white;
+  overflow: hidden;
+}
+.poster strong {
+  font-size: 22px;
+  line-height: 1.1;
+}
+.poster span {
+  font-size: 11px;
+}
+.tone-1 {
+  background: #704f80;
+}
+.tone-2 {
+  background: #17625e;
+}
+.tone-3 {
+  background: #8c482b;
+}
+.tone-4 {
+  background: #433f88;
+}
+.tone-5 {
+  background: #7c354b;
+}
+
+/* Divers */
+.fiche {
+  max-width: 260px;
+}
+.compteur {
+  font-size: 72px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+.nouveau {
+  display: inline-block;
+  background: #b65300;
+  color: white;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+.text-button {
+  background: none;
+  color: #425971;
+  text-decoration: underline;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.text-button:hover {
+  background: none;
+  color: #142f72;
+}
+.hint {
+  font-size: 14px;
+  color: #425971;
+}
+.error {
+  background: #ffedea;
+  border: 1px solid #a92c28;
+  color: #7c201d;
+  padding: 12px 15px;
+  border-radius: 6px;
+  max-width: 600px;
+}
