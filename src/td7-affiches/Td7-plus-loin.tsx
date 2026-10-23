@@ -44,7 +44,7 @@ export function Td7() {
   useEffect(() => {
     async function load() {
       try {
-        const response = await fetch('/films.json');
+        const response = await fetch('/api/films');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data: Movie[] = await response.json();
         setMovies(data);
