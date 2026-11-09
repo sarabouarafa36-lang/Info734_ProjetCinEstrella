@@ -11,6 +11,8 @@ app.use((req, res, next) => {
   })
   next()
 })
+// TD 12 : lit le corps JSON des requêtes et le met dans req.body.
+app.use(express.json());
 
 app.get('/api/films', (req, res) => {
   const annee = req.query.annee
@@ -40,6 +42,32 @@ app.get('/api/films/:id', (req, res) => {
 
   res.json(film)
 })
+
+// TD 12 : ajouter un film.
+app.post('/api/films', (req, res) => {
+  const { title, year } = req.body ?? {};
+
+  const titre = typeof title === 'string' ? title.trim() : '';
+  if (titre.length < 1 || titre.length > 80) {
+    res.status(400).json({ erreur: 'Le titre doit faire de 1 à 80 caractères.' });
+    return;
+  }
+
+  if (typeof year !== 'number' || !Number.isInteger(year) || year < 1888 || year > 2030) {
+    res.status(400).json({ erreur: "L'année doit être un nombre entier, de 1888 à 2030." });
+    return;
+  }
+
+  const film = {
+    id: Math.max(0, ...films.map((f) => f.id)) + 1,
+    title: titre,
+    year,
+    overview: '',
+  };
+  films.push(film);
+  res.status(201).json(film);
+});
+
 
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`)
