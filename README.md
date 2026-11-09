@@ -1,4 +1,5 @@
 # CinEstrella
+Noms et Prénoms : Bouarafa Sara & En-nesyry Ahlam
 
 Projet de l'UE INFO734 (exercices serveur) : une application web sur le thème du cinéma, construite avec **React 19**, **TypeScript** et **Vite**.
 
