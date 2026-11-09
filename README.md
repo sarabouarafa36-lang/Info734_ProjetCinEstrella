@@ -63,5 +63,3 @@ Une solution possible des TD 1 à 7. Tu peux la lire, la comparer à ton code, o
 `npm run build` vérifie les types, puis construit le site.
 
 Pour les TD 9 et 10 : les films sont dans `src/donnees/films.ts`. La grille du TD 7 (`src/td7-affiches/Td7.tsx`) les charge depuis `public/films.json`.
-
-Noms et Prénoms : Bouarafa Sara & En-nesyry Ahlam
