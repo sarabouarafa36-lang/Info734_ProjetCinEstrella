@@ -68,6 +68,52 @@ app.post('/api/films', (req, res) => {
   res.status(201).json(film);
 });
 
+// TD 13 : transforme le texte de l'adresse en nombre entier, ou renvoie null si ce n'en est pas un.
+function lireId(texte: string): number | null {
+  return /^-?\d+$/.test(texte) ? Number(texte) : null;
+}
+
+// TD 13 : marquer un film vu, ou à voir.
+app.patch('/api/films/:id', (req, res) => {
+  const id = lireId(req.params.id);
+  if (id === null) {
+    res.status(400).json({ erreur: "L'identifiant n'est pas un nombre entier." });
+    return;
+  }
+
+  const film = films.find((f) => f.id === id);
+  if (!film) {
+    res.status(404).json({ erreur: `Aucun film n'a l'identifiant ${id}.` });
+    return;
+  }
+
+  const { seen } = req.body ?? {};
+  if (typeof seen !== 'boolean') {
+    res.status(400).json({ erreur: 'Le champ « seen » doit être true ou false.' });
+    return;
+  }
+
+  film.seen = seen;
+  res.json(film);
+});
+
+// TD 13 : supprimer un film.
+app.delete('/api/films/:id', (req, res) => {
+  const id = lireId(req.params.id);
+  if (id === null) {
+    res.status(400).json({ erreur: "L'identifiant n'est pas un nombre entier." });
+    return;
+  }
+
+  const index = films.findIndex((f) => f.id === id);
+  if (index === -1) {
+    res.status(404).json({ erreur: `Aucun film n'a l'identifiant ${id}.` });
+    return;
+  }
+
+  films.splice(index, 1);
+  res.status(204).end();
+});
 
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`)

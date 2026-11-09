@@ -3,6 +3,7 @@ export type Film = {
   title: string
   year: number
   overview: string
+  seen?: boolean
 }
 
 export const films: Film[] = [

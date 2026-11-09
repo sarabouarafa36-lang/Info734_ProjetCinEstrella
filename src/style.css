@@ -178,3 +178,12 @@ h2 {
   border-radius: 6px;
   max-width: 600px;
 }
+/* TD 13 : boutons des cartes et film vu */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.movie.seen {
+  opacity: 0.6;
+}
